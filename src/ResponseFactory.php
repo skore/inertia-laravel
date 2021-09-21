@@ -68,6 +68,11 @@ class ResponseFactory
 
     public function render($component, $props = [])
     {
+        return $this->page($component, $props);
+    }
+
+    public function page($component, $props = [])
+    {
         if ($props instanceof Arrayable) {
             $props = $props->toArray();
         }
@@ -78,6 +83,11 @@ class ResponseFactory
             $this->rootView,
             $this->getVersion()
         );
+    }
+
+    public function dialog($component, $props = [])
+    {
+        return $this->page($component, $props)->dialog();
     }
 
     public function location($url)
