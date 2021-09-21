@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static Response render($component, $props = [])
  * @method static \Illuminate\Http\Response location($url)
  * @method static LazyProp lazy(callable $callback)
- * @method static Response dialog()
+ * @method static Response dialog($component, $props = [])
  *
  * @see \Inertia\ResponseFactory
  */
